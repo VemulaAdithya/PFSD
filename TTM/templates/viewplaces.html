@@ -1,0 +1,22 @@
+{% extends 'ttmhome.html' %}
+{% block 'b1' %}
+<h2 align="center"><font color="green">Packages Available</font></h2>
+<table align=center border="2">
+    <tr>
+        <thead bgcolor="Lightgray" align="center">
+        <td>Tour Code</td>
+        <td>Tour Name</td>
+        <td>Tour Package</td>
+        <td>Description</td>
+        </thead>
+    </tr>
+    {% for i in placesdata %}
+    <tr align="center">
+        <td> {{i.tourcode}} </td>
+        <td> {{i.tourname}} </td>
+        <td> {{i.tourpackage}} </td>
+        <td> {{i.desc}} </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

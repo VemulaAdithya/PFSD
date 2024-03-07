@@ -1,0 +1,23 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Tourism Management</title>
+<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body  style="background-image: url('{% static 'images/home1.jpg' %}');background-repeat:no-repeat;background-size:100%;";>
+<a href = "{% url 'register' %}"> Sign-up | </a>
+<a href = "{% url 'login' %}">Login | </a>
+<a href = "{% url 'changepassword' %}">Change Password | </a>
+<a href = "{% url '' %}">Home</a>
+<br><br><br>
+{% block 'b1' %}
+ <h2 align="center"> <font color="green"> KLU Travel Tourism Management</font></h2>
+<div>
+    {% for i in messages %}
+    <h4 align="center"><font color="dark-red"> {{i}} </font></h4>
+    {% endfor %}
+</div>
+{% endblock %}
+</body>
+</html>
